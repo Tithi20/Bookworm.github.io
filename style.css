@@ -1,0 +1,168 @@
+/* google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Island+Moments&family=Kolker+Brush&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+h5 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #1d1d1d;
+}
+
+h6 {
+  color: #d8d8d8;
+}
+
+button {
+  font-size: 0.8rem;
+  font-weight: 700;
+  outline: none;
+  border: none;
+  background-color: #1d1d1d;
+  color: aliceblue;
+  padding: 13px 30px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #3a3833;
+}
+
+#logo {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding-right: 0px;
+  font-size: 40px;
+  padding-left: 0px;
+  font-family: "Dancing Script", cursive;
+  color: rgb(146, 86, 161);
+}
+
+/* navbar */
+
+.navbar {
+  font-size: 17px;
+  top: 0;
+  left: 0;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+#nav-col {
+  color: black;
+  padding: 0 20px;
+}
+
+#nav-col:hover,
+.navbar i:hover,
+#nav-col.active,
+.navbar i.active {
+  color: rgb(146, 86, 161);
+}
+
+.navbar i {
+  font-size: 1.2rem;
+  padding: 0 12px;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+#cont {
+  padding: 0 100px;
+}
+
+/* Mobile nav */
+.navbar-light .navbar-toggler {
+  border: none;
+  outline: none;
+}
+#bar {
+  font-size: 1.5rem;
+  padding: 7px;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+  color: black;
+}
+#bar:hover,
+#bar.active {
+  color: white;
+}
+
+@media only screen and (max-width: 991px) {
+  #cont > button:hover,
+  #cont > button.focus {
+    background-color: rgb(146, 86, 161);
+  }
+
+  #cont > button:hover #bar,
+  #cont > button.focus #bar {
+    color: white;
+  }
+
+  #navbarSupportedContent > ul {
+    margin: 1rem;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+  }
+  #navbarSupportedContent > ul > li:nth-child(n) > a {
+    padding: 10px 0;
+  }
+}
+
+/* home page */
+
+#home {
+  background-image: url("home2.jpg");
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  /* background-position: top 25% right 0%; */
+  padding: 0 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#home h5 {
+  color: rgb(146, 86, 161);
+}
+#home h1 {
+  color: white;
+}
+#home span {
+  color: rgb(146, 86, 161);
+}
+#home p {
+  color: white;
+}
