@@ -30,6 +30,9 @@ function validate() {
   } else if (password.value != "12345678") {
     error.innerHTML = "Incorrect Password";
     return false;
+  } else if (email.value != "dtithi54@gmail.com") {
+    error.innerHTML = "Incorrect email";
+    return false;
   } else {
     return true;
   }
@@ -75,4 +78,34 @@ function validation1() {
   } else {
     form_id1.setAttribute("action", "twelve.html");
   }
+}
+
+
+const button = document.querySelector(".view-all");
+const button1 = document.querySelector(".view-all1");
+
+function toggler() {
+  var toggle = document.querySelector(".product");
+  toggle.classList.toggle("opacity");
+}
+
+function colleges() {
+  var toggler = document.querySelector(".products");
+  toggler.classList.toggle("opacity1");
+}
+
+//hamburger menu media query navbar
+const bar = document.querySelector("#bar");
+const close = document.querySelector("#close");
+const nav = document.querySelector("#navbar");
+if (bar) {
+  bar.addEventListener("click", () => {
+    nav.classList.add("loading");
+  });
+}
+
+if (close) {
+  close.addEventListener("click", () => {
+    nav.classList.remove("loading");
+  });
 }

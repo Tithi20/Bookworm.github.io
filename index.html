@@ -19,48 +19,28 @@
     <title>Document</title>
   </head>
   <body>
-    <!--Navigation bar-->
-    <nav class="fixed-top navbar navbar-expand-lg navbar-light bg-light py-3">
-      <div class="container-fluid" id="cont">
-        <a class="navbar-brand" id="logo" href="#">Bookworm</a>
+    <section id="header" class="pos-sticky">
+      <a href="index.html"><img src="l_nobg.png" class="logo" alt="" /></a>
 
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span><i id="bar" class="fas fa-bars"></i></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" id="nav-col" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="nav-col" href="login.html">Login</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="nav-col" href="#">Shop</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="nav-col" href="#">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="nav-col" href="#">Contact Us</a>
-            </li>
-
-            <li class="nav-item">
-              <i class="fas fa-search"></i>
-              <i class="fas fa-shopping-bag"></i>
-            </li>
-          </ul>
-        </div>
+      <div>
+        <ul id="navbar">
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="oppurtunities.html">Oppurtunities</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./login.html">Login</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="nav-item">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-shopping-bag"></i>
+          </li>
+          <a href="#" id="close"><i class="fa-solid fa-xmark">X</i></a>
+        </ul>
       </div>
-    </nav>
+      <div id="mobile">
+        <i id="bar" class="fas fa-outdent"></i>
+      </div>
+    </section>
 
     <!--Home page-->
     <section id="home">
@@ -72,6 +52,32 @@
           adipisicing elit. Nobis quod iusto
         </p>
         <button>Explore Now</button>
+      </div>
+    </section>
+
+    <!--Publisheers section-->
+    <section id="brand">
+      <div class="grid py-5">
+        <div class="column">
+
+          <img src="b1.png" alt="" />
+        </div>
+        <div class="column">
+
+          <img src="b2n.png" alt="">
+        </div>
+        <div class="column">
+
+          <img src="b3.png" alt="">
+        </div>
+        <div class="column">
+
+          <img src="b4.png" alt="">
+        </div>
+        <div class="column">
+
+          <img src="b5.png" alt="">
+        </div>
       </div>
     </section>
 
@@ -88,5 +94,21 @@
       integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
       crossorigin="anonymous"
     ></script>
+    <script>
+      const bar = document.querySelector("#bar");
+      const close = document.querySelector("#close");
+      const nav = document.querySelector("#navbar");
+      if (bar) {
+        bar.addEventListener("click", () => {
+          nav.classList.add("loading");
+        });
+      }
+
+      if (close) {
+        close.addEventListener("click", () => {
+          nav.classList.remove("loading");
+        });
+      }
+    </script>
   </body>
 </html>

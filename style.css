@@ -56,38 +56,91 @@ button:hover {
 #logo {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   padding-right: 0px;
-  font-size: 40px;
+  font-size: 20px;
   padding-left: 0px;
-  font-family: "Dancing Script", cursive;
+  /* font-family: "Dancing Script", cursive; */
+
   color: rgb(146, 86, 161);
+}
+#logo img {
+  height: 80px;
+  width: 100%;
+}
+@media only screen and (max-width: 400px) {
+  #logo img {
+    height: 10px;
+  }
 }
 
 /* navbar */
 
-.navbar {
-  font-size: 17px;
+/* Header part */
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background-color: #f0efed;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  z-index: 999;
+  /* position: sticky; */
   top: 0;
   left: 0;
 }
+.pos-sticky {
+  position: sticky;
+}
 
-.navbar-light .navbar-nav .nav-link {
-  font-weight: 500;
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#navbar li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+#navbar li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
   transition: 0.3s ease;
 }
 
-#nav-col {
-  color: black;
-  padding: 0 20px;
+#navbar li a:hover {
+  color: #810857;
 }
 
-#nav-col:hover,
-.navbar i:hover,
-#nav-col.active,
-.navbar i.active {
-  color: rgb(146, 86, 161);
+#navbar li a:hover,
+#navbar li a.active {
+  color: #810857;
 }
 
-.navbar i {
+#navbar li a.active::after,
+#navbar li a:hover::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background-color: #6d0a7e;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+#mobile {
+  display: none;
+  align-items: center;
+}
+#close {
+  display: none;
+}
+.logo {
+  height: 60px;
+}
+#navbar i {
   font-size: 1.2rem;
   padding: 0 12px;
   cursor: pointer;
@@ -95,47 +148,58 @@ button:hover {
   transition: 0.3s ease;
 }
 
-#cont {
-  padding: 0 100px;
-}
-
-/* Mobile nav */
-.navbar-light .navbar-toggler {
-  border: none;
-  outline: none;
-}
-#bar {
-  font-size: 1.5rem;
-  padding: 7px;
-  cursor: pointer;
-
-  transition: 0.3s ease;
-  color: black;
-}
-#bar:hover,
-#bar.active {
-  color: white;
-}
-
-@media only screen and (max-width: 991px) {
-  #cont > button:hover,
-  #cont > button.focus {
-    background-color: rgb(146, 86, 161);
+@media (max-width: 799px) {
+  .section-p1 {
+    padding: 40px 40px;
   }
 
-  #cont > button:hover #bar,
-  #cont > button.focus #bar {
-    color: white;
+  /* Navbar */
+
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 300px;
+    background-color: #e3e6f3;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    padding: 80px 0 0 10px;
+    transition: 0.3s;
+    z-index: 5000;
   }
 
-  #navbarSupportedContent > ul {
-    margin: 1rem;
-    justify-content: flex-end;
-    align-items: flex-end;
-    text-align: right;
+  #navbar.loading {
+    right: 0px;
   }
-  #navbarSupportedContent > ul > li:nth-child(n) > a {
-    padding: 10px 0;
+  #navbar li {
+    margin-bottom: 25px;
+  }
+  #mobile {
+    display: flex;
+    align-items: center;
+  }
+  #mobile i {
+    color: #1a1a1a;
+    padding-left: 20px;
+    font-size: 24px;
+  }
+
+  #close {
+    display: initial;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: #222;
+    font: 20px;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  .logo {
+    height: 50px;
   }
 }
 
@@ -165,4 +229,43 @@ button:hover {
 }
 #home p {
   color: white;
+}
+
+/*Publisher section*/
+
+.grid {
+  display: block;
+  padding: 16px;
+  display: grid;
+  grid-gap: 16px;
+  margin: 10px;
+}
+
+.grid .column {
+  /* background-color: pink; */
+  margin-bottom: 16px;
+  padding: 10px;
+}
+
+.grid .column img {
+  height: 50px;
+  width: 90%;
+}
+
+@media only screen and (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
