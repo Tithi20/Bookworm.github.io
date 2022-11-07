@@ -269,3 +269,86 @@ button:hover {
     grid-template-columns: repeat(5, 1fr);
   }
 }
+
+/*Main section 1*/
+
+#main1 {
+  background-color: rgb(240, 232, 232);
+  margin: 10px;
+  padding: 10px;
+  padding-bottom: 0px;
+  margin-bottom: 25px;
+}
+#main1 h3 {
+  padding-left: 28px;
+  font-family: "Roboto";
+}
+#main1 h6 {
+  font-size: 14px;
+}
+
+.grid-main1 {
+  display: block;
+  padding: 16px;
+  display: grid;
+  grid-gap: 16px;
+  margin: 10px;
+}
+
+.grid-main1 .column-main1 {
+  /* background-color: pink; */
+  margin-bottom: 16px;
+  padding: 10px;
+}
+
+.grid-main1 .column-main1 img {
+  height: 150px;
+  width: 60%;
+  margin-bottom: 6px;
+}
+
+#main1 .deal {
+  color: white;
+  background-color: red;
+  padding-right: 5px;
+  padding-left: 5px;
+  border-radius: 3px;
+}
+
+@media only screen and (min-width: 768px) {
+  .grid-main1 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid-main1 .column-main1 img {
+    height: 170px;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .grid-main1 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .grid-main1 .column-main1 img {
+    height: 140px;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .grid-main1 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .grid-main1 .column-main1 img {
+    height: 240px;
+    width: 100%;
+  }
+}
+
+/*slider section*/
+
+#slider .box {
+  width: 3000px;
+  background-color: red;
+  border-radius: 10px;
+}
